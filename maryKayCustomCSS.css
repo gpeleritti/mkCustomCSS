@@ -1,0 +1,97 @@
+.video-content {
+    border:none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.content {
+  max-width: 100% !important;
+}
+
+.site {
+    background-color: #151b17 !important;
+}
+
+.video-bg-gradient {
+    background-color: #151b17 !important;
+}
+
+.video-footer {
+  display: none !important;
+}
+
+.video-title {
+  margin:0 !important;
+}
+
+.footer {
+  display: none !important;
+}
+
+.video-header {
+  margin: 0 !important;
+}
+
+.video-player {
+    height: 100vh !important;
+    max-height: 100vh !important;
+
+}
+
+.video-player__meta {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+.video-player__meta-title {
+    padding-top: 10px !important;
+    font-size: 1em !important;
+    padding: 1em 25% 2em 1em !important;
+    width: 100% !important;
+    background: linear-gradient(180deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.7) 30%,rgba(0,0,0,.7) 70%,transparent) !important;
+    min-height:70px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.333 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+.video-player__meta-play {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin-left: -1em !important;
+    margin-top: -1em !important;
+    width: 2em !important;
+    height: 2em !important;
+    line-height: 2em !important;
+    border: none !important;
+    border-radius: 50%;
+    font-size: 3.5em !important;
+    color: #fff !important;
+    background-color: rgba(0,0,0,.45) !important;
+    transition: border-color .4s,outline .4s,background-color .4s !important;
+    display: block !important;
+    text-align: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    opacity: 1;
+}
+
+.video-player__meta-play > .fa {
+    padding-left: 10px !important;
+}
+
+.video-player:hover > .video-player__meta-play {
+    background-color: #d52484 !important;
+}
+
+.video-player__meta:hover > .video-player__meta-play {
+    background-color: #d52484 !important;
+}
+
+.vjs-dock-description {
+    display: none !important;
+}
