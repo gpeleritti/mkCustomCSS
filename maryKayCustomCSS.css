@@ -95,3 +95,19 @@
 .vjs-dock-description {
     display: none !important;
 }
+
+.vjs-social-share-links {
+    color: #FFF !important;
+}
+
+.vjs-social-share-links:hover {
+    color: #FFF !important;
+}
+
+.vjs-social-share-link {
+    color: #FFF !important;
+}
+
+.vjs-social-share-link:hover {
+    color: #FFF !important;
+}
