@@ -18,7 +18,7 @@ videojs.registerPlugin('avonSharePlugin', function() {
     player.on('loadstart', function() {
         var info = player.mediainfo,
             socialOverlay = player.socialOverlay;
-        //location.href format should looks like http://.....?...&repId=repIdValue
+        //location.href format should looks like http://.....?...&repid=repIdValue
         var repId = window.location.search.split('repid=')[1] || '5464798';
         var url = 'https://www.avon.com/video-share?video='+info.id+'&player='+player.bcinfo.playerId +'&repid='+repId;
         socialOverlay.setDirectLink(url);
