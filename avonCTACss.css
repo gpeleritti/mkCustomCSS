@@ -1,0 +1,16 @@
+.cta-button {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    font-family: Gotham;
+    font-size: 16px;
+    line-height: 28px;
+    color: black;
+    width: 280px;
+    height:80px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+/*46 max characters of Gotham 16px black on max 2 lines. 28px line-height.*/
+/*270x80px white box at 60% opacity. Box flush right to the edge of the video, 20px from top.*/
