@@ -15,12 +15,14 @@ videojs.registerPlugin('avonSharePlugin', function() {
         });
     });
 
-    player.on('loadstart', function() {
+    player.on('loadedmetadata', function() {
         var info = player.mediainfo,
             socialOverlay = player.socialOverlay;
-        //location.href format should looks like http://.....?...&repid=repIdValue
-        var repId = window.location.search.split('repid=')[1] || '5464798';
-        var url = 'https://www.avon.com/video-share?video='+info.id+'&player='+player.bcinfo.playerId +'&repid='+repId;
+
+        var rep = window.location.search.split('repid=')[1];
+        var repid = rep? rep.split('&')[0] : 'undefined';
+
+        var url = 'https://www.avon.com/video-share?video='+info.id+'&player='+player.bcinfo.playerId +'&repid='+repid;
         socialOverlay.setDirectLink(url);
     });
 });
