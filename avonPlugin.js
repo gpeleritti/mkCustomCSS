@@ -7,7 +7,7 @@ videojs.registerPlugin('avonSharePlugin', function() {
             player.socialButton.hide();
         }
 
-        player.on('loadedmetadata',function(){
+        player.on('loadstart',function(){
             var info = player.mediainfo,
                 socialOverlay = player.socialOverlay;
             if (info.tags.indexOf('shareable') > -1){

@@ -4,7 +4,7 @@ videojs.registerPlugin('avonCTAPlugin', function() {
         player.on('loadedmetadata',function(){
             var info = player.mediainfo;
             info.link = info.link? info.link : {
-                url: 'http://www.google.com'
+                url: 'https://www.avon.com/'
             }
             if (info.link && info.link.url) {
                 var buttonCTA = document.createElement('a');
