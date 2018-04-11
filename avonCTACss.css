@@ -10,6 +10,8 @@
     height:80px;
     background-color: white;
     opacity: 0.6;
+    padding: 24px 105px;
+    text-decoration: none;
 }
 
 /*46 max characters of Gotham 16px black on max 2 lines. 28px line-height.*/
