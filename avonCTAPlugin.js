@@ -11,7 +11,10 @@ videojs.registerPlugin('avonCTAPlugin', function() {
                 buttonCTA.setAttribute('class', 'cta-button');
                 buttonCTA.setAttribute('href', info.link.url);
                 buttonCTA.setAttribute('target', '_blank');
-                buttonCTA.innerHTML = info.link.text? info.link.text : 'Buy Now!';
+                var textCTA = document.createElement('span');
+                textCTA.setAttribute('class', 'cta-text');
+                textCTA.innerHTML = info.link.text? info.link.text : 'Buy Now!';
+                buttonCTA.appendChild(textCTA);
                 document.getElementsByClassName('video-js')[0].append(buttonCTA);
             }
         });
