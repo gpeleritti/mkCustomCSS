@@ -17,9 +17,9 @@ videojs.registerPlugin('avonSharePlugin', function() {
             var rep = window.location.search.split('repid=')[1];
             var repid = rep? rep.split('&')[0] : 'undefined';
 
-            console.log('BASEURL: ', options.baseUrl);
+            console.log('BASEURL: ', options.customURL);
 
-            var url = options.baseUrl+'?video='+info.id+'&player='+player.bcinfo.playerId +'&repid='+repid;
+            var url = options.customURL+'?video='+info.id+'&player='+player.bcinfo.playerId +'&repid='+repid;
             socialOverlay.setDirectLink(url);
         });
     });
