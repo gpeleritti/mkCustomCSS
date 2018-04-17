@@ -21,3 +21,11 @@
 .envelope-icon::before{
     content:"\f003";
 }
+
+.vjs-share-control.vjs-button{
+    z-index : 3;
+}
+
+.vjs-modal-dialog.vjs-player-info-modal{
+    z-index : 4;
+}
