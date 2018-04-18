@@ -13,7 +13,6 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
             if (info.tags && info.tags.indexOf('shareable') > -1){
                 player.socialButton.show();
             }
-
             var rep = window.location.search.split('repid=')[1];
             var repid = rep? rep.split('&')[0] : 'undefined';
 
@@ -37,5 +36,31 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
             socialOverlay.setDirectLink(url);
             socialOverlay.setEmbedCode(finalEC);
         });
+
+        player.on('endscreen', function(event){
+
+            //Hidding sharing options from end screen, removing 'Share: ' from the title and centering
+            //restart button when the video is not shareable
+            var info = player.mediainfo;
+            if (!info.tags || info.tags.indexOf('shareable') === -1) {
+
+                if (document.getElementsByClassName('vjs-social-share-links')[0]) {
+                    document.getElementsByClassName('vjs-social-share-links')[0].style.display = 'none';
+                }
+                if (document.getElementsByClassName('vjs-social-direct-link')[0]) {
+                    document.getElementsByClassName('vjs-social-direct-link')[0].style.display = 'none';
+                }
+                if (document.getElementsByClassName('vjs-social-embed-code')[0]){
+                    document.getElementsByClassName('vjs-social-embed-code')[0].style.display = 'none';
+                }
+                if (document.getElementsByClassName('vjs-restart')[0]){
+                    document.getElementsByClassName('vjs-restart')[0].classList.add('restart-centered');
+                }
+                if(document.getElementsByClassName('vjs-social-title')[0]) {
+                    document.getElementsByClassName('vjs-social-title')[0].innerHTML = document.getElementsByClassName('vjs-social-title')[0].innerHTML.replace('Share: ', '');
+                }
+            }
+        });
     });
 });
+
