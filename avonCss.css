@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'FontAwesome';
-    src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
-    src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
-        url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
-        url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
-        url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
-        url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+    src : url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.eot?v=4.3.0");
+    src : url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+    url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+    url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+    url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+    url("https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
 }
 
 .mobile-icon, .envelope-icon {
@@ -35,4 +35,12 @@
 
 .vjs-modal-dialog.vjs-player-info-modal{
     z-index : 4;
+}
+
+"@font-face {font-family: 'FontAwesome'; src : url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.eot?v=4.3.0');"+
+"src : url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),"+
+"url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),"+
+"url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.woff?v=4.3.0') format('woff'),"+
+"url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),"+
+"url('https://d1reucolqiaak1.cloudfront.net/avon/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');"
 }

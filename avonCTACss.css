@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('https://d1reucolqiaak1.cloudfront.net/avon/Gotham-Medium.eot');
+    src: url('https://d1reucolqiaak1.cloudfront.net/avon/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+    url('https://d1reucolqiaak1.cloudfront.net/avon/Gotham-Medium.woff2') format('woff2'),
+    url('https://d1reucolqiaak1.cloudfront.net/avon/Gotham-Medium.woff') format('woff'),
+    url('https://d1reucolqiaak1.cloudfront.net/avon/Gotham-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 .cta-button {
     position: absolute;
     right: 0;
