@@ -3,17 +3,17 @@ videojs.registerPlugin('avonCTAPlugin', function() {
     player.ready(function() {
         player.on('loadedmetadata',function(){
             var info = player.mediainfo;
-            info.link = info.link? info.link : {
-                url: 'https://www.avon.com/'
-            }
             if (info.link && info.link.url) {
+                var rep = window.location.search.split('repid=')[1];
+                var repid = rep? rep.split('&')[0] : 'undefined';
+                var target = (info.link.url.indexOf('?')!= -1)? '&repid='+repid : '?repid='+repid;
                 var buttonCTA = document.createElement('a');
                 buttonCTA.setAttribute('class', 'cta-button');
-                buttonCTA.setAttribute('href', info.link.url);
+                buttonCTA.setAttribute('href', info.link.url+target);
                 buttonCTA.setAttribute('target', '_blank');
                 var textCTA = document.createElement('span');
                 textCTA.setAttribute('class', 'cta-text');
-                textCTA.innerHTML = info.link.text? info.link.text : 'Buy Now!';
+                textCTA.innerHTML = info.link.text? info.link.text : (options.defaultText? options.defaultText : 'More Information');
                 buttonCTA.appendChild(textCTA);
                 document.getElementsByClassName('video-js')[0].append(buttonCTA);
             }
