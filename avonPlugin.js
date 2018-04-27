@@ -40,12 +40,25 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         }
 
         player.on('loadstart',function(){
+            console.log('loadstart');
             getDataForPlayer(player);
         });
 
         player.on('loadedmetadata',function(){
+            console.log('loadedmetadata');
             getDataForPlayer(player);
         });
+
+        // player.on('loadeddata', function(event){
+        //     console.log('loadeddata');
+        //     player.socialOverlay.setDirectLink('loadeddata');
+        //
+        // });
+        // player.on('sourcechanged', function(event){
+        //     console.log('sourcechanged');
+        //     player.socialOverlay.setDirectLink('sourceChanged');
+        // });
+
 
         player.on('endscreen', function(event){
 
