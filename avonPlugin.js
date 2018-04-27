@@ -12,6 +12,8 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
                 socialOverlay = player.socialOverlay;
             if (info.tags && info.tags.indexOf('shareable') > -1){
                 player.socialButton.show();
+            } else {
+                player.socialButton.hide();
             }
             var rep = window.location.search.split('repid=')[1];
             var repid = rep? rep.split('&')[0] : 'undefined';
