@@ -5,6 +5,7 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         var info = player.mediainfo,
             socialOverlay = player.socialOverlay;
         if (info.tags && info.tags.indexOf('shareable') > -1){
+            debugger;
             player.socialButton.show();
         } else {
             player.socialButton.hide();
@@ -40,33 +41,30 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         }
 
         player.on('loadstart',function(){
-            console.log('loadstart');
             getDataForPlayer(player);
         });
 
         player.on('loadedmetadata',function(){
-            console.log('loadedmetadata');
             getDataForPlayer(player);
         });
 
-        // player.on('loadeddata', function(event){
-        //     console.log('loadeddata');
-        //     player.socialOverlay.setDirectLink('loadeddata');
-        //
-        // });
-        // player.on('sourcechanged', function(event){
-        //     console.log('sourcechanged');
-        //     player.socialOverlay.setDirectLink('sourceChanged');
-        // });
-
+        //remove focus from facebook sharing icon
+        document.getElementsByClassName('vjs-share-control vjs-button')[0].onclick = function(){
+            console.log('click on share');
+            document.getElementsByClassName('vjs-icon-facebook')[0].setAttribute('tabindex', '0');
+            document.getElementsByClassName('vjs-close-button')[0].focus();
+            console.log(document.getElementsByClassName('vjs-icon-facebook')[0]);
+            console.log('BLALALALALAAL');
+            debugger;
+        };
 
         player.on('endscreen', function(event){
 
             //Hidding sharing options from end screen, removing 'Share: ' from the title and centering
             //restart button when the video is not shareable
             var info = player.mediainfo;
-            if (!info.tags || info.tags.indexOf('shareable') === -1) {
 
+            if (!info.tags || info.tags.indexOf('shareable') === -1) {
                 if (document.getElementsByClassName('vjs-social-share-links')[0]) {
                     document.getElementsByClassName('vjs-social-share-links')[0].style.display = 'none';
                 }
