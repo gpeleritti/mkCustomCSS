@@ -1,6 +1,15 @@
 videojs.registerPlugin('avonCTAPlugin', function() {
     var player = this;
     player.ready(function() {
+        player.socialButton.on('show', function(){
+            console.log('show modal');
+            document.getElementsByClassName('cta-button')[0].style.display = 'none';
+
+        });
+        player.socialButton.on('hide', function(){
+            console.log('hide modal');
+            document.getElementsByClassName('cta-button')[0].style.display = 'block';
+        });
         player.on('loadedmetadata',function(){
             var info = player.mediainfo;
             if (info.link && info.link.url) {
