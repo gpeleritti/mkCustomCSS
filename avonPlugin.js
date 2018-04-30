@@ -5,7 +5,6 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         var info = player.mediainfo,
             socialOverlay = player.socialOverlay;
         if (info.tags && info.tags.indexOf('shareable') > -1){
-            debugger;
             player.socialButton.show();
         } else {
             player.socialButton.hide();
@@ -41,15 +40,12 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         }
 
         player.on('loadstart',function(){
-            getDataForPlayer(player);
+            player.socialButton.hide();
         });
 
         player.on('loadedmetadata',function(){
             getDataForPlayer(player);
         });
-
-        //remove focus from facebook sharing icon
-        document.getElementsByClassName('vjs-share-control vjs-button')[0].
 
         player.on('endscreen', function(event){
 

@@ -30,11 +30,17 @@
 }
 
 .vjs-share-control.vjs-button{
-    z-index : 3;
+    z-index : 1;
 }
 
 .vjs-modal-dialog.vjs-player-info-modal{
     z-index : 4;
 }
 
-.vjs-social-embed-code { display: none; }
+.vjs-social-embed-code {
+    display: none;
+}
+
+.vjs-social-share-link.vjs-icon-facebook:focus{
+    color: #fff;
+}
