@@ -3,13 +3,10 @@ videojs.registerPlugin('avonCTAPlugin', function() {
     player.ready(function() {
 
         player.socialOverlay.on('modalopen', function(){
-            console.log('modalopen');
             document.getElementsByClassName('cta-button')[0].style.display = 'none';
         });
 
-
         player.socialOverlay.on('modalclose', function(){
-            console.log('modalclose');
             document.getElementsByClassName('cta-button')[0].style.display = 'block';
         });
 

@@ -36,16 +36,26 @@
     color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .cta-button {
         position: absolute;
         right: 0;
         bottom: 50px;
         width: 100px;
         height:40px;
-        font-size: 14px;
+        font-size: 12px;
         text-decoration: none;
         text-align: center;
         vertical-align: middle;
+    }
+
+    .cta-text{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100px;
+        transform: translate(0%, -50%);
+        text-align: center;
+        color: #000;
     }
 }
