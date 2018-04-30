@@ -19,5 +19,4 @@ videojs.registerPlugin('avonCTAPlugin', function() {
             }
         });
     });
-
 });

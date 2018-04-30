@@ -49,14 +49,7 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
         });
 
         //remove focus from facebook sharing icon
-        document.getElementsByClassName('vjs-share-control vjs-button')[0].onclick = function(){
-            console.log('click on share');
-            document.getElementsByClassName('vjs-icon-facebook')[0].setAttribute('tabindex', '0');
-            document.getElementsByClassName('vjs-close-button')[0].focus();
-            console.log(document.getElementsByClassName('vjs-icon-facebook')[0]);
-            console.log('BLALALALALAAL');
-            debugger;
-        };
+        document.getElementsByClassName('vjs-share-control vjs-button')[0].
 
         player.on('endscreen', function(event){
 
