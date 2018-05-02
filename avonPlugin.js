@@ -47,6 +47,16 @@ videojs.registerPlugin('avonSharePlugin', function(options) {
             getDataForPlayer(player);
         });
 
+        player.socialOverlay.on('click', function(ev){
+            if (ev.target.tagName === 'INPUT'){
+                ev.target.focus();
+                ev.target.select();
+                ev.target.setSelectionRange(0, 9999);
+                document.execCommand('copy');
+            }
+
+        });
+
         player.on('endscreen', function(event){
 
             //Hidding sharing options from end screen, removing 'Share: ' from the title and centering
