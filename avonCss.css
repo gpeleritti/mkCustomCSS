@@ -44,3 +44,13 @@
 .vjs-social-share-link.vjs-icon-facebook:focus{
     color: #fff;
 }
+
+.vjs-restart.vjs-icon-replay.vjs-button {
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .vjs-restart.vjs-icon-replay.vjs-button {
+       font-size: 2.3em;
+    }
+}
